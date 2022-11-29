@@ -1,8 +1,9 @@
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import React from 'react';
 
-import { colors } from '../constants/themes/colors';
+import { COLORS } from '../constants/themes/colors';
 import { Categories, Product, Products } from '../screens';
+import { isIOS } from '../utils';
 
 const Stack = createNativeStackNavigator();
 
@@ -12,12 +13,13 @@ const ShopNavigator = () => {
       initialRouteName="Categories"
       screenOptions={{
         headerStyle: {
-          backgroundColor: colors.backgroundDark,
+          backgroundColor: isIOS ? COLORS.backgroundDark : COLORS.backgroundLight,
         },
-        headerTintColor: colors.text,
+        headerTintColor: COLORS.text,
         headerTitleStyle: {
           fontFamily: 'Lato-Bold',
         },
+        presentation: 'card',
       }}>
       <Stack.Screen
         name="Categories"
@@ -26,7 +28,13 @@ const ShopNavigator = () => {
           headerShown: false,
         }}
       />
-      <Stack.Screen name="Products" component={Products} />
+      <Stack.Screen
+        name="Products"
+        component={Products}
+        options={{
+          title: 'Nueva pantalla',
+        }}
+      />
       <Stack.Screen name="Product" component={Product} />
     </Stack.Navigator>
   );
