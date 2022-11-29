@@ -20,6 +20,7 @@ const ShopNavigator = () => {
           fontFamily: 'Lato-Bold',
         },
         presentation: 'card',
+        headerBackTitle: '',
       }}>
       <Stack.Screen
         name="Categories"
@@ -35,7 +36,13 @@ const ShopNavigator = () => {
           title: route.params.title,
         })}
       />
-      <Stack.Screen name="Product" component={Product} />
+      <Stack.Screen
+        name="Product"
+        component={Product}
+        options={({ route }) => ({
+          title: route.params.title,
+        })}
+      />
     </Stack.Navigator>
   );
 };
