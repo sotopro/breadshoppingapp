@@ -31,9 +31,9 @@ const ShopNavigator = () => {
       <Stack.Screen
         name="Products"
         component={Products}
-        options={{
-          title: 'Nueva pantalla',
-        }}
+        options={({ route }) => ({
+          title: route.params.title,
+        })}
       />
       <Stack.Screen name="Product" component={Product} />
     </Stack.Navigator>
