@@ -27,6 +27,17 @@ export const styles = StyleSheet.create({
     marginHorizontal: 10,
     marginVertical: 5,
   },
+  buttonDisabledConfirm: {
+    backgroundColor: COLORS.gray,
+    borderRadius: 5,
+    paddingHorizontal: 20,
+    paddingVertical: 15,
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    marginHorizontal: 10,
+    marginVertical: 5,
+  },
   textButtonConfirm: {
     fontSize: 14,
     fontFamily: 'Lato-Regular',
