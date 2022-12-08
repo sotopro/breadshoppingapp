@@ -15,8 +15,6 @@ export const styles = StyleSheet.create({
     borderTopWidth: 1,
     borderTopColor: COLORS.primaryDark,
     paddingVertical: 10,
-    marginBottom: 10,
-    marginHorizontal: 10,
   },
   buttonConfirm: {
     backgroundColor: COLORS.primaryDark,
@@ -26,6 +24,8 @@ export const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
+    marginHorizontal: 10,
+    marginVertical: 5,
   },
   textButtonConfirm: {
     fontSize: 14,
