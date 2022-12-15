@@ -17,6 +17,7 @@ export const styles = StyleSheet.create({
     borderWidth: 1,
     borderRadius: 10,
     backgroundColor: COLORS.white,
+    minHeight: 320,
   },
   title: {
     fontSize: 18,
@@ -28,14 +29,6 @@ export const styles = StyleSheet.create({
     fontSize: 14,
     fontFamily: 'Lato-Regular',
     marginVertical: 5,
-  },
-  input: {
-    height: 45,
-    borderBottomColor: COLORS.primary,
-    borderBottomWidth: 1,
-    width: '90%',
-    fontFamily: 'Lato-Regular',
-    marginBottom: 10,
   },
   promptButton: {
     width: '100%',
